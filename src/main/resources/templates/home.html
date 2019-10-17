@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:th="https://www.thymeleaf.org" xmlns:sec="https://www.thymeleaf.org/thymeleaf-extras-springsecurity3">
+    <head>
+        <title>共告維護</title>
+        
+        <!-- i18n start -->
+        <!-- <meta charset = "ISO-8859-1"/>
+        <title th:text="#{user.title}">用户登陆</title>
+    <script th:src="@{/webjars/jquery/jquery.min.js}"></script>
+    <script th:src="@{/webjars/jquery-i18n-properties/jquery.i18n.properties.min.js}"></script>
+
+    <script th:inline="javascript">
+        //获取应用路径
+        var ROOT = [[${#servletContext.contextPath}]];
+
+        //获取默认语言
+        var LANG_COUNTRY = [[${#locale.language+'_'+#locale.country}]];
+
+        //初始化i18n插件
+        $.i18n.properties({
+            path: ROOT + '/i18n/',//这里表示访问路径
+            name: 'messages',//文件名开头
+            language: LANG_COUNTRY,//文件名语言 例如en_US
+            mode: 'both'//默认值
+        });
+
+        //初始化i18n函数
+        function i18n(msgKey) {
+            try {
+                return $.i18n.prop(msgKey);
+            } catch (e) {
+                return msgKey;
+            }
+        }
+
+        //获取国际化翻译值
+        console.log(i18n('user.title'));
+        console.log(i18n('User Login'));
+    </script> -->
+        <!-- i18n end -->
+    </head>
+    <body>
+        <h1>公告維護</h1>
+
+        <p>Click <a th:href="@{/login}">login</a> to see a greeting.</p>
+        <!-- i18n test start -->
+        
+        <p th:text="#{lang.annouce_id}"></p>:
+<p th:text="#{lang.subject}"></p>:
+<p th:text="#{lang.content}"></p>:
+<p th:text="#{lang.start_date}"></p>:
+<p th:text="#{lang.end_date}"></p>:
+<p th:text="#{lang.deleted}"></p>:
+<p th:text="#{lang.create_date}"></p>:
+<p th:text="#{lang.create_by}"></p>:
+<p th:text="#{lang.modified_date}"></p>:
+<p th:text="#{lang.modified_by}"></p>:
+        
+        
+   <!--      <a class="btn btn-sm" th:href="@{/index.html(lang='zh_CN')}">中文</a>
+<a class="btn btn-sm" th:href="@{/index.html(lang='en_US')}">English</a> -->
+        <h1 th:text="#{lang.username}"></h1>
+  <!--       <span th:text="#{lang.change}"></span>:
+			<select id="locales">
+    			<option value=""></option>
+    			<option value="en" th:text="#{lang.eng}"></option>
+    			<option value="ti" th:text="#{lang.ti}"></option>
+			</select> -->
+			
+			<!-- <form action="/locale" method="get">
+       <input name="lang" type="hidden" value="ti"  />
+       <button>泰文</button>
+    </form>
+   
+    <form action="/locale" method="get">
+       <input name="lang" type="hidden" value="en" />
+       <button>英文</button>
+    </body>
+     </form> -->
+     <!-- i18n test end -->
+</html>
+
+
+
+
+<!-- 
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:th="https://www.thymeleaf.org"
+      xmlns:sec="https://www.thymeleaf.org/thymeleaf-extras-springsecurity3">
+    <head>
+        <title>Hello World!</title>
+    </head>
+    <body>
+    <a href="連結網址">連結名稱</a>
+    login
+    </body>
+</html> 
+-->
